@@ -1,6 +1,6 @@
 package com.example.ali.cleanarchitectureexample.di.component
 
-import com.example.ali.cleanarchitectureexample.FeedActivity
+import com.example.ali.cleanarchitectureexample.ui.feed.feedimpl.FeedActivity
 import com.example.ali.cleanarchitectureexample.di.module.ApiModule
 import com.example.ali.cleanarchitectureexample.di.module.AppModule
 import com.example.ali.cleanarchitectureexample.di.module.NetworkModule

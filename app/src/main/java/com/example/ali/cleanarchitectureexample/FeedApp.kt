@@ -11,6 +11,7 @@ import com.example.ali.cleanarchitectureexample.di.module.NetworkModule
  */
 class FeedApp: Application(){
     var appComponent: AppComponent? = null
+
     override fun onCreate() {
         super.onCreate()
         appComponent = DaggerAppComponent
