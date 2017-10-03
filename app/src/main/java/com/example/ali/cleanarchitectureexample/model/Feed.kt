@@ -8,16 +8,16 @@ import com.google.gson.annotations.SerializedName
 /**
  * Created by ali on 02/10/17.
  */
-class Feed(@SerializedName("userId")
+data class Feed(@SerializedName("userId")
            @Expose
-           var userId: Int? = null,
+           val userId: Int,
            @SerializedName("id")
            @Expose
-           var id: Int? = null,
+           val id: Int,
            @SerializedName("title")
            @Expose
-           var title: String? = null,
+           val title: String,
            @SerializedName("body")
            @Expose
-           var body: String? = null
+           val body: String
 )
