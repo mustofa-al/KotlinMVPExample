@@ -14,9 +14,7 @@ import javax.inject.Inject
 
 class FeedActivity : AppCompatActivity(), FeedContract.View {
     @Inject
-    lateinit var interactor: FeedInteractor
-
-    lateinit var presenter: FeedContract.Presenter
+    lateinit var presenter: FeedPresenter
 
     lateinit var adapter:  FeedAdapter
 
@@ -24,9 +22,9 @@ class FeedActivity : AppCompatActivity(), FeedContract.View {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_feed)
         (application as FeedApp).appComponent?.inject(this)
-        presenter = FeedPresenter(this, interactor)
         adapter = FeedAdapter()
         setupRecyclerView()
+        presenter.setFeedView(this)
         presenter.getFeedData()
     }
 
