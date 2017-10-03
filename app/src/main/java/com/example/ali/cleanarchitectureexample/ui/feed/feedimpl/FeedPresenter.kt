@@ -2,7 +2,6 @@ package com.example.ali.cleanarchitectureexample.ui.feed.feedimpl
 
 import com.example.ali.cleanarchitectureexample.ui.feed.feedcontract.FeedContract
 import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.schedulers.Schedulers
 import javax.inject.Inject
 
 /**
@@ -18,7 +17,6 @@ class FeedPresenter @Inject constructor(val interactor: FeedInteractor): FeedCon
 
     override fun getFeedData() {
         interactor.getFeedData()
-                .subscribeOn(Schedulers.newThread())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(
                         {

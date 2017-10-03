@@ -45,7 +45,7 @@ class NetworkModule(val context: Context){
         return Retrofit.Builder()
                 .baseUrl(URL)
                 .client(httpClient)
-                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+                .addCallAdapterFactory(RxJava2CallAdapterFactory.createAsync())
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
     }
