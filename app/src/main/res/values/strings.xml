@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">CleanArchitectureExample</string>
+    <string name="app_name">KotilinMVPExample</string>
     <string name="api_url">https://jsonplaceholder.typicode.com</string>
 </resources>
